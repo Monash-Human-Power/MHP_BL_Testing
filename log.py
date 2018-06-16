@@ -5,7 +5,7 @@ import datetime
 
 now = datetime.datetime.now()
 
-f = open('/home/pi/Documents/BL_Testing/bl_log.txt', 'a')
+f = open('/home/pi/Documents/MHP_BL_Testing/bl_log.txt', 'a')
 
 f.write(str(now)+"\n")
 

@@ -7,3 +7,6 @@ b) Putting the line "python /home/pi/Documents/MHP_BL_Testing/start.py" before t
 3. Setup the log.py script to run every minute by typing
 a) "crontab -e"
 b) Putting the line "* * * * * python /home/pi/Documents/MHP_BL_Testing/log.py" at the end of the file
+
+Note make sure that the bl_log.txt file is created using "nano bl_log.txt" instead of "sudo nano bl_log.txt" otherwise the python
+scripts will not have permission to edit the file.
