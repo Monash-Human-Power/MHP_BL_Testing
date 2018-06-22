@@ -1,1 +1,4 @@
 # This logs date and time every minute while the pi is online
+2018-06-22 12:31:01.411975
+2018-06-22 12:32:01.597767
+2018-06-22 12:33:01.771463
