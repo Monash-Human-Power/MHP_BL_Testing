@@ -4,14 +4,15 @@ This repo contains code to conduct battery life testing.
 
 To get setup and install this repo:
 1. Clone this repo into the Documents folder on the pi
-2. Setup the start.py script to run on boot by typing
-a) "sudo nano /etc/rc.local"
-b) Putting the line "python /home/pi/Documents/MHP_BL_Testing/start.py &" before the line "exit 0"
-c) If running a loaded test with camera breakout, put "python /home/pi/Documents/MHP_Raspicam/Camera.py &" before the line "exit 0" also. Make sure the MHP_Raspicam GitHub library is also in the Documents folder on the pi, and that the camera is connected.
+2. Setup the start.py script to run on boot by typing:
+   a) "sudo nano /etc/rc.local"
+   b) Putting the line "python /home/pi/Documents/MHP_BL_Testing/start.py &" before the line "exit 0"
+   c) If running a loaded test with camera breakout, put "python /home/pi/Documents/MHP_Raspicam/Camera.py &" before the line "exit 0"
+      also. Make sure the MHP_Raspicam GitHub library is also in the Documents folder on the pi, and that the camera is connected.
 3. Setup the log.py script to run every minute by typing
 a) "crontab -e"
 b) Putting the line "* * * * * python /home/pi/Documents/MHP_BL_Testing/log.py" at the end of the file
-c) If running a loaded test with camera breakout, also put "*/10 * * * * sh /home/pi/Documents/MHP_BL_Testing/kill.sh" at the end of the file. This will run the camera script repetitively every 10 minutes.
+c) If running a loaded test with camera breakout, also put "*/10 * * * * sh /home/pi/Documents/MHP_BL_Testing/kill.sh" at the end of the      file. This will run the camera script repetitively every 10 minutes.
 
 Note make sure that the bl_log.txt file is created using "nano bl_log.txt" instead of "sudo nano bl_log.txt" otherwise the python
 scripts will not have permission to edit the file.
